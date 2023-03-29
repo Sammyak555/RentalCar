@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0px 70px 0px 70px;
+    align-items: center;
+    background-color: #006639;
+    color: white;
+}
+.signuplogin{
+    border: 2.5px solid white;
+    padding:  4px 7px 4px 7px;
+    color: white;
+    border-radius: 50px;
+}
+.signuplogin:hover{
+    cursor: pointer;
+    background-color: rgb(68, 68, 68);
+    
+}
