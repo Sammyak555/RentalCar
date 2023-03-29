@@ -3,6 +3,7 @@ import * as types from "./actiontypes"
 const initialState={
     carDetails:{},
     allcars:[],
+    stateCity:[],
     isLoading:false,
     isError:false
 }
@@ -26,6 +27,15 @@ export const carReducer = ( state = initialState, action ) => {
             return {...state,isLoading:false,allcars:payload}
         }
         case types.GET_ALLCAR_ERROR:{
+            return {...state,isLoading:false,isError:true}
+        }
+        case types.GET_STATECITY_REQUEST:{
+            return {...state,isLoading:true}
+        }
+        case types.GET_STATECITY_SUCCESS:{
+            return {...state,isLoading:false,stateCity:payload}
+        }
+        case types.GET_STATECITY_ERROR:{
             return {...state,isLoading:false,isError:true}
         }
         default : return state

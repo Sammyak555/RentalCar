@@ -1,6 +1,7 @@
 import React from 'react'
 import "../Styles/Home.css"
 import tesla from "../Images/TeslaModel.avif"
+import BookingSlot from '../Components/BookingSlot'
 
 const Home = () => {
   return (
@@ -15,13 +16,15 @@ const Home = () => {
                 <img src={tesla} alt="" />
             </div>
         </div>
-        {/* <div className='bookslot'></div> */}
+        <div className='bookslot'>
+            <BookingSlot />
+        </div>
         <div className='tavelguide'>
             <h1>Road Trips and Driving Guides</h1>
             <br />
             <p>On a road trip, oftentimes it’s all about the journey and not the final destination. Whether you want to explore the road less traveled, or you're just looking for a way to get home, Enterprise can help. Below you’ll find a variety of road trip guides for popular destinations across the U.S. with easy-to-follow itineraries and recommendations. From visiting small New England towns along the East Coast to following the surf and sand on the West Coast, we have you covered. Start planning your road trip today!</p>
         </div>
-        
+
     </div>
   )
 }

@@ -20,11 +20,20 @@ export const getallcarsucc=(payload)=>{
 export const getallcarfail=()=>{
     return{type: types.GET_ALLCAR_ERROR}
 }
+export const getstatecityreq=()=>{
+    return{type: types.GET_STATECITY_REQUEST}
+}
+export const getstatecitysucc=(payload)=>{
+    return{type: types.GET_STATECITY_SUCCESS,payload}
+}
+export const getstatecityfail=()=>{
+    return{type: types.GET_STATECITY_ERROR}
+}
 
 export const getcarDetails= async (dispatch) =>{
 
     dispatch(getcarreq())
-    return await axios.get(`https://tame-newt-garment.cyclic.app/cars/641d5b0af383b010e8296e5d`)
+    return await axios.get(`http://localhost:5050/cars/`)
     .then((r)=>{
         dispatch(getcarsucc(r.data))
     })
@@ -34,9 +43,9 @@ export const getcarDetails= async (dispatch) =>{
 }
 
 export const getallcarDetails= async (dispatch) =>{
-
+    
     dispatch(getallcarreq())
-    return await axios.get(`https://tame-newt-garment.cyclic.app/cars/`)
+    return await axios.get(`http://localhost:5050/cars`)
     .then((r)=>{
         dispatch(getallcarsucc(r.data))
     })
@@ -44,3 +53,16 @@ export const getallcarDetails= async (dispatch) =>{
         dispatch(getallcarfail())
     })
 }
+
+export const getstatecityDetails=(payload)=> async (dispatch) =>{
+    
+    dispatch(getstatecityreq())
+    return await axios.get(`http://localhost:5050/cars/state?state=${payload.state}&city=${payload.city}`)
+    .then((r)=>{
+        dispatch(getstatecitysucc(r.data))
+    })
+    .catch((e)=>{
+        dispatch(getstatecityfail())
+    })
+}
+ 
