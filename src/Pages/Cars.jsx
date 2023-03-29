@@ -13,8 +13,8 @@ const Cars = () => {
 
   const handleClick = (el) => {
       navigate(`/cardetails/${el._id}`)
-      
   }
+
   return (
     <div className='carsbox'>
       {
@@ -34,7 +34,7 @@ const Cars = () => {
                   <Heading size='md' >{el.title}</Heading>
                   <Divider />
                   <ButtonGroup spacing='0.5'>
-                  <Button variant='ghost' >
+                  <Button variant='ghost'>
                     <TbManualGearbox /> {el.detailsitem}
                   </Button>
                   <Button variant='ghost'color={'green'} >

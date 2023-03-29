@@ -7,4 +7,15 @@
 }
 .detailsbox{
     border: 1px solid blue;
+    text-align: start;
+}
+.specbox{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10%;
+    width: 98%;
+    border: 1px solid red;
+    margin: auto;
+    height: 180px;
+    padding: 8px;
 }
