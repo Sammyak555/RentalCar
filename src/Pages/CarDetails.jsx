@@ -8,6 +8,7 @@ import { BsPeople } from 'react-icons/bs';
 import { AiFillStar } from 'react-icons/ai';
 import { getcarDetails } from '../Redux/action'
 import "../Styles/CarDetails.css"
+import Slideshow from '../Components/Slideshow';
 
 const CarDetails = () => {
   const dispatch = useDispatch()
@@ -22,13 +23,15 @@ const CarDetails = () => {
   }, [])
   return (
     <div className='cardetailspage'>
-      <div></div>
+      <div>
+       
+      </div>
       <div className='detailsbox'>
         <Card>
           <CardHeader>
+          <Slideshow car={car}/>
             <Heading size='lg'>{car.title}</Heading>
           </CardHeader>
-
           <CardBody>
             <Stack divider={<StackDivider />} spacing='4'>
               <Box>
