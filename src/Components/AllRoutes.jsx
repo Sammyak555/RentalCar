@@ -9,17 +9,16 @@ import Thanking from '../Pages/Thanking'
 
 const AllRoutes = () => {
   return (
-    <div>
+    
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/login' element={<Login/>} />
             <Route path='/signup' element={<Signup/>} />
             <Route path='/cars' element={<Cars/>} />
-            <Route path='/cardetails' element={<CarDetails/>} />
+            <Route path='/cardetails/:id' element={<CarDetails/>} />
             <Route path='/thanking' element={<Thanking/>} />
-            
         </Routes>
-    </div>
+    
   )
 }
 

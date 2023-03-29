@@ -1,0 +1,19 @@
+.carsbox{
+    border: 1px solid red;
+    display: grid;
+    width: 85%;
+    margin: auto;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.singlecard{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.singlecard:hover{
+    cursor: pointer;
+}

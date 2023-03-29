@@ -30,10 +30,10 @@ export const getstatecityfail=()=>{
     return{type: types.GET_STATECITY_ERROR}
 }
 
-export const getcarDetails= async (dispatch) =>{
+export const getcarDetails =(id) => async (dispatch) =>{
 
     dispatch(getcarreq())
-    return await axios.get(`http://localhost:5050/cars/`)
+    return await axios.get(`http://localhost:5050/cars/${id}`)
     .then((r)=>{
         dispatch(getcarsucc(r.data))
     })

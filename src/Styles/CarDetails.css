@@ -1,0 +1,10 @@
+.cardetailspage{
+    border: 1px solid red;
+    width: 96%;
+    margin: auto;
+    height: 760px;
+    padding: 40px;
+}
+.detailsbox{
+    border: 1px solid blue;
+}
