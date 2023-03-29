@@ -11,6 +11,7 @@ import {
     Container,
     Stack,
     Select,
+    useToast,
 } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -27,6 +28,8 @@ const BookingSlot = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const cars = useSelector((store) => store.carReducer.allcars)
+    const stateCity = useSelector((store) => store.carReducer.stateCity)
+    const toast = useToast()
 
     var arr = []
     var StatewiseCities = []
@@ -59,17 +62,16 @@ const BookingSlot = () => {
         })
     }
     var uniqueCity = city.filter((value, index, array) => array.indexOf(value) === index)
-    console.log(uniqueCity)
+
 
     const handleadd = (e) => {
         e.preventDefault();
-        console.log(cities, state)
         let payload = {
             city: cities,
             state: state
         }
         dispatch(getstatecityDetails(payload)).then(() => {
-            navigate("/cars")
+           navigate("/cars")
         })
     }
 
