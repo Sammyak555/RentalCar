@@ -23,14 +23,20 @@ const Slideshow = ({car}) => {
     Images.push(car.imagesrc,car.imagesrc2,car.imagesrc3,car.imagesrc4,car.imagesrc5)
     
     return (
-        <div style={{width:"60%",margin:"auto"}}>
+        <div style={{width:"95%",margin:"auto"}}>
         <Box width="95%" margin="auto">
             <Slide>
             {
                 Images.length>0&&
               Images.map((item)=>(
                 <Box key={Math.random()} >
-                  <Image width="65%" height='250' margin={'auto'} src={item}/>
+                  <Image width={{
+                    base:'80%',
+                    sm:'80%',
+                    md:'85%',
+                    lg:'65%',
+                    xl:'50%'
+                  }} height='250' margin={'auto'} src={item}/>
                 </Box>
               ))
             }

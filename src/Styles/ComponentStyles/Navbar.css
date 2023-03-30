@@ -31,11 +31,10 @@
         width: 100%;
         padding: 0px 30px 0px 30px;
         align-items: center;
+        /* background-color: #006639; */
         background-color: #006639;
         color: white;
     }
-    .menulist{
-        width: 80px;
-    }
+    
 
 }

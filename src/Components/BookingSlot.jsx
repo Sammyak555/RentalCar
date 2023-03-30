@@ -29,11 +29,23 @@ const BookingSlot = () => {
     const navigate = useNavigate()
     const cars = useSelector((store) => store.carReducer.allcars)
     const stateCity = useSelector((store) => store.carReducer.stateCity)
-    const toast = useToast()
+    const {isAuth,isError} = useSelector((store) => store.authReducer)
+  const toast = useToast();
+
 
     var arr = []
     var StatewiseCities = []
     let city = []
+
+    const showToast=(des,status)=>{
+        toast({
+          description: des,
+          status: status,
+          duration: 3000,
+          isClosable: true,
+          position:"bottom"
+        })
+      }
 
     useEffect(() => {
         dispatch(getallcarDetails)
@@ -66,13 +78,21 @@ const BookingSlot = () => {
 
     const handleadd = (e) => {
         e.preventDefault();
+        if(!state){
+            showToast("Please select the state","warning")
+        }
+        if(!cities){
+            showToast("Please select the cities","warning")
+        }
         let payload = {
             city: cities,
             state: state
         }
-        dispatch(getstatecityDetails(payload)).then(() => {
-           navigate("/cars")
-        })
+        if(payload.city&&payload.state){
+            dispatch(getstatecityDetails(payload)).then(() => {
+                navigate("/cars")
+             })
+        }
     }
 
 
