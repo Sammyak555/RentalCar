@@ -10,6 +10,15 @@
     color: white;
     padding: 20px ;
 }
+.bookslot{
+    /* border: 1px solid blue; */
+    height: 80px;
+    padding-top: 12px;
+    background-color: #F3F3F3;
+}
+.homehalf{
+    border: 1px solid red
+}
 .teslaimg{border: 1px solid blue;
     
     width: 40%;
@@ -28,9 +37,66 @@ h1{
     height: 100%;
 }
 .tavelguide{
-    border: 1px solid red;
+   width: 100%;;
     padding: 20px 20px 30px 20px;
 }
 .tavelguide>p{
     text-align: start;
+}
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 426px) {
+.homehead{
+    display: grid;
+
+    height: 240px;
+    /* border: 1px solid red; */
+}
+
+.homeheadcontent{border: 1px solid blue;
+    width: 100%;
+    background-color: black;
+    text-align: start;
+    color: white;
+    padding: 20px ;
+}
+.bookslot{
+    /* border: 1px solid blue; */
+    height: 80px;
+    padding-top: 12px;
+    background-color: #F3F3F3;
+    
+}
+.homehalf{
+    border: 1px solid red;
+    width:100%
+}
+.teslaimg{border: 1px solid blue;
+    
+    width: 100%;
+    height: 100%;   
+}
+h2{
+    font-size: 18px;
+}
+h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.teslaimg>img{
+    width: 100%;
+    height: 100%;
+}
+.tavelguide{
+    width: 95%;
+    padding: 10px 10px 10px 10px;
+    margin-top: 70px;
+}
+.tavelguide>p{
+    text-align: start;
+}
+
 }

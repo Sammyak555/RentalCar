@@ -46,8 +46,8 @@ const Cars = () => {
                 </ButtonGroup>
                 <Divider />
                   <Text color='blue.600' fontSize='2xl'>
-                  <p style={{marginLeft:"10px",fontWeight:"600",color:"green"}}>Rs:{el.pricediscounted}</p>
-                  <p style={{marginLeft:"10px",fontWeight:"400",textDecoration:"line-through"}}>Rs:{el.priceoriginal}</p>
+                  <p style={{marginLeft:"10px",fontWeight:"600",color:"green"}}>₹{el.pricediscounted}/hr</p>
+                  <p style={{marginLeft:"10px",fontWeight:"400",textDecoration:"line-through"}}>₹{el.priceoriginal}/hr</p>
                   </Text>
                 </Stack>
               </CardBody>

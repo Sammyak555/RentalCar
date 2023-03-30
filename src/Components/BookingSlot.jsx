@@ -78,7 +78,7 @@ const BookingSlot = () => {
 
     return (
         <>
-            <Button color={'white'} colorScheme='white' bgColor={"green.400"} w={"fit-content"} onClick={onOpen} variant={'ghost'}>BOOKING SLOT</Button>
+            <Button color={'white'}  bgColor='#006639' _hover={{ bg: 'gray.700' }} w={"fit-content"} onClick={onOpen} borderRadius='none' width='64' height='14'>BOOKING SLOT</Button>
             <Container>
                 <Modal
                     initialFocusRef={initialRef}

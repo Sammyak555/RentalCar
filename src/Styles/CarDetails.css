@@ -1,5 +1,5 @@
 .cardetailspage{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 96%;
     margin: auto;
     padding: 40px;
@@ -13,9 +13,18 @@
     grid-template-columns: repeat(5,1fr);
     gap: 10%;
     width: 98%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     height: auto;
     
     padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 426px) {
+
+
 }

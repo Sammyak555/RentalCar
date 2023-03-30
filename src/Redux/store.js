@@ -8,9 +8,11 @@ import {
   
   import thunk from "redux-thunk";
   import {carReducer} from "../Redux/reducer.js"
+  import {authReducer} from "./AuthReducer/reducer.js"
   
   const rootReducer = combineReducers({
-    carReducer
+    carReducer,
+    authReducer
   });
   
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
