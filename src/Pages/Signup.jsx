@@ -35,7 +35,7 @@ const Signup = () => {
       md: '60%',
       lg: "60%",
       xl: '50%'
-    }} m="auto" marginTop='20' p="20px 10px" bgColor="#f3f3f3" border={'1px solid red'}>
+    }} m="auto" marginTop='20' p="20px 10px" bgColor="#f3f3f3" >
       <Box w="100%"><h1 style={{ fontWeight: "bold", fontSize: "20px" }}>Registration</h1></Box>
       <Box w="75%" m="auto" mt="20px" display={"flex"} flexDirection="column" alignItems="center" >
         <Box w="100%" m="auto" justifyContent={"space-around"}>
