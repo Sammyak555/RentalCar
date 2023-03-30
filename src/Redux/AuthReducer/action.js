@@ -23,7 +23,7 @@ export const getLogin=(data)=>(dispatch)=>{
         password:data.password
         }
 
-        return axios.post(`http://localhost:5050/users/login`,payload)
+        return axios.post(`https://nice-gold-crocodile-hat.cyclic.app/users/login`,payload)
         .then((r)=>{
             dispatch(getloginsucc(r.data))
         })

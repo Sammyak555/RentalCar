@@ -29,23 +29,23 @@ const BookingSlot = () => {
     const navigate = useNavigate()
     const cars = useSelector((store) => store.carReducer.allcars)
     const stateCity = useSelector((store) => store.carReducer.stateCity)
-    const {isAuth,isError} = useSelector((store) => store.authReducer)
-  const toast = useToast();
+    const { isAuth, isError } = useSelector((store) => store.authReducer)
+    const toast = useToast();
 
 
     var arr = []
     var StatewiseCities = []
     let city = []
 
-    const showToast=(des,status)=>{
+    const showToast = (des, status) => {
         toast({
-          description: des,
-          status: status,
-          duration: 3000,
-          isClosable: true,
-          position:"bottom"
+            description: des,
+            status: status,
+            duration: 3000,
+            isClosable: true,
+            position: "bottom"
         })
-      }
+    }
 
     useEffect(() => {
         dispatch(getallcarDetails)
@@ -75,30 +75,29 @@ const BookingSlot = () => {
     }
     var uniqueCity = city.filter((value, index, array) => array.indexOf(value) === index)
 
-
     const handleadd = (e) => {
         e.preventDefault();
-        if(!state){
-            showToast("Please select the state","warning")
+        if (!state) {
+            showToast("Please select the state", "warning")
         }
-        if(!cities){
-            showToast("Please select the cities","warning")
+        if (!cities) {
+            showToast("Please select the cities", "warning")
         }
         let payload = {
             city: cities,
             state: state
         }
-        if(payload.city&&payload.state){
+        if (payload.city && payload.state) {
             dispatch(getstatecityDetails(payload)).then(() => {
                 navigate("/cars")
-             })
+            })
         }
     }
 
 
     return (
         <>
-            <Button color={'white'}  bgColor='#006639' _hover={{ bg: 'gray.700' }} w={"fit-content"} onClick={onOpen} borderRadius='none' width='64' height='14'>BOOKING SLOT</Button>
+            <Button color={'white'} bgColor='#006639' _hover={{ bg: 'gray.700' }} w={"fit-content"} onClick={onOpen} borderRadius='none' width='64' height='14'>BOOKING SLOT</Button>
             <Container>
                 <Modal
                     initialFocusRef={initialRef}

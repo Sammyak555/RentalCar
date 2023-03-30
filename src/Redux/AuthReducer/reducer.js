@@ -21,7 +21,7 @@ export const authReducer = (state = initState, action) => {
             return { ...state, isError: true }
         }
         case types.GET_LOGOUT: {
-            return { ...state, isError: false, authData: {}}
+            return { ...state, isError: false, authData: {} }
         }
 
         default: return state

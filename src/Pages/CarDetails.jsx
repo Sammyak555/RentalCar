@@ -15,9 +15,7 @@ const CarDetails = () => {
   const dispatch = useDispatch()
   const params = useParams()
   const carDetails = useSelector((store) => store.carReducer.carDetails)
-
   let car = carDetails[0]
-  console.log(car)
 
   useEffect(() => {
     dispatch(getcarDetails(params.id))

@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const register = (data) => {
-  return axios.post('http://localhost:5050/users/Register', data)
+  return axios.post('https://nice-gold-crocodile-hat.cyclic.app/users/Register', data)
 
 }
 
@@ -31,10 +31,10 @@ const Signup = () => {
 
   return (
     <Box w={{
-      base:'90%',
-      md:'60%',
-      lg:"60%",
-      xl:'50%'
+      base: '90%',
+      md: '60%',
+      lg: "60%",
+      xl: '50%'
     }} m="auto" marginTop='20' p="20px 10px" bgColor="#f3f3f3" border={'1px solid red'}>
       <Box w="100%"><h1 style={{ fontWeight: "bold", fontSize: "20px" }}>Registration</h1></Box>
       <Box w="75%" m="auto" mt="20px" display={"flex"} flexDirection="column" alignItems="center" >

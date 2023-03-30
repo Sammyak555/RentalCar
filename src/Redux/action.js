@@ -33,7 +33,7 @@ export const getstatecityfail=()=>{
 export const getcarDetails =(id) => async (dispatch) =>{
 
     dispatch(getcarreq())
-    return await axios.get(`http://localhost:5050/cars/${id}`)
+    return await axios.get(`https://nice-gold-crocodile-hat.cyclic.app/cars/${id}`)
     .then((r)=>{
         dispatch(getcarsucc(r.data))
     })
@@ -45,7 +45,7 @@ export const getcarDetails =(id) => async (dispatch) =>{
 export const getallcarDetails= async (dispatch) =>{
     
     dispatch(getallcarreq())
-    return await axios.get(`http://localhost:5050/cars`)
+    return await axios.get(`https://nice-gold-crocodile-hat.cyclic.app/cars`)
     .then((r)=>{
         dispatch(getallcarsucc(r.data))
     })
@@ -57,7 +57,7 @@ export const getallcarDetails= async (dispatch) =>{
 export const getstatecityDetails=(payload)=> async (dispatch) =>{
     
     dispatch(getstatecityreq())
-    return await axios.get(`http://localhost:5050/cars/state?state=${payload.state}&city=${payload.city}`)
+    return await axios.get(`https://nice-gold-crocodile-hat.cyclic.app/cars/state?state=${payload.state}&city=${payload.city}`)
     .then((r)=>{
         dispatch(getstatecitysucc(r.data))
     })
